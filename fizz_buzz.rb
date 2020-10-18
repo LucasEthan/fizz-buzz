@@ -1,8 +1,15 @@
 #!/usr/bin/env ruby
 
 print "Enter a number: "
-number = gets.to_i
+num = gets.to_i
+fizzbuzz_array = []
 
-number.times do |i|
+num.times do |i|
   puts i + 1
 end
+
+element = ""
+element += "Fizz" if (num % 3).zero?
+element += "Buzz" if (num % 5).zero?
+element = num.to_s if element.empty?
+fizzbuzz_array << element
