@@ -8,8 +8,17 @@ def divisible_by_5?(number)
   (number % 5).zero?
 end
 
-print "Enter a number: "
-num = gets.to_i
+begin
+  print "Enter a number: "
+  num = Integer(gets)
+rescue ArgumentError
+  puts "You must enter an integer"
+end
+
+if num.negative?
+  puts "You must enter a positive integer"
+end
+
 fizzbuzz_array = []
 
 num.times do |i|
@@ -22,7 +31,6 @@ num.times do |i|
 
   # If the number is divisible neither by 3 nor 5, just use the number
   entry = current_num.to_s if entry.empty?
-
   fizzbuzz_array << entry
 end
 
