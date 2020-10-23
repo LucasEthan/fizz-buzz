@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
-require_relative "fizz_buzz_class"
+require_relative "fizzbuzz_helper"
+include FizzBuzzHelper
 
 begin
   print "Enter a number: "
@@ -9,7 +10,7 @@ rescue ArgumentError
   puts "You must enter an integer"
 end
 
-if num.negative?
+if num < 1
   puts "You must enter a positive integer"
 end
 

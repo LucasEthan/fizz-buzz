@@ -1,5 +1,4 @@
-class FizzBuzzClass
-
+module FizzBuzzHelper
   def divisible_by_3?(number)
     (number % 3).zero?
   end
