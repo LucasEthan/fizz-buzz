@@ -1,5 +1,12 @@
-class FizzBuzzClass
-  def create_array(num)
+class FizzBuzz
+
+  attr_reader :fizzbuzz_numbers
+
+  def initialize(fizzbuzz_numbers)
+    @fizzbuzz_numbers = fizzbuzz_numbers
+  end
+
+  def generate_fizzbuzz(num)
     fizzbuzz_array = []
 
     num.times do |i|
@@ -13,7 +20,6 @@ class FizzBuzzClass
       # If the number is divisible neither by 3 nor 5, just use the number
       entry = current_num.to_s if entry.empty?
       fizzbuzz_array << entry
-      puts fizzbuzz_array
     end
   end
 end
