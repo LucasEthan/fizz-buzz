@@ -1,7 +1,7 @@
+class InvalidNumberError < StandardError
+end
+
 module FizzBuzzHelper
-  def InvalidNumberError < StandardError
-  end
-  
   def divisible_by_3?(number)
     (number % 3).zero?
   end

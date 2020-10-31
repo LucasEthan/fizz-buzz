@@ -1,9 +1,8 @@
 class FizzBuzz
-
   attr_reader :fizzbuzz_numbers
 
-  def initialize(fizzbuzz_numbers)
-    @fizzbuzz_numbers = fizzbuzz_numbers
+  def initialize(num)
+    @fizzbuzz_numbers = generate_fizzbuzz(num)
   end
 
   def generate_fizzbuzz(num)
@@ -21,5 +20,6 @@ class FizzBuzz
       entry = current_num.to_s if entry.empty?
       fizzbuzz_array << entry
     end
+    fizzbuzz_array
   end
 end
